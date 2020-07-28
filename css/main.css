@@ -1,0 +1,244 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    letter-spacing: 0.05rem;
+    font-family: Montserrat,sans-serif;
+}
+
+*::selection {
+    color: #394989;
+    background-color: #4ea0ae;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 50px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+
+html {
+    scroll-behavior: smooth;
+    scroll-snap-type: proximity;
+}
+
+body {
+    overflow-x: hidden;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to right bottom,rgba(57, 62, 70, 0.918),rgb(34, 40, 49,0.7)),url('/img/coffee-cup.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+.go-to-top {
+    position: fixed;
+    bottom: 3rem;
+    right: 3rem;
+    width: 4rem;
+    height: 4rem;
+    border: none;
+    border-radius: 5rem;
+    background: #4ea0ae;
+    box-shadow: 10px 10px 20px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+
+
+.go-to-top p {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.go-to-top a {
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-weight: 600;
+    text-decoration: none;
+    color: #d92027;
+}
+
+.go-to-top img {
+    width: 4rem;
+    height: 4rem;
+}
+
+.header {
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background: white;
+    padding: 1rem;
+    box-shadow: 0 0.6rem 1rem rgba(0,0,0,0.3);
+}
+
+.heading img {
+    width: 2rem;
+    margin-right: 1rem;
+}
+
+.heading span {
+    background: linear-gradient(to right bottom,#394989,#4ea0ae,#3b2e5a);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.search-bar {
+    margin-top: 6.4rem;
+    padding: 2rem;
+    text-align: center;
+}
+
+input,button {
+    padding: 1rem 2rem;
+    border-radius: 0.3rem;
+    border: none;
+    outline: none;
+}
+
+button,a {
+    cursor: pointer;
+}
+
+form .btn {    
+    margin: 1rem;
+    background-color: white;
+}
+
+.main-container {
+    width: 100%;
+    padding: 5rem;
+}
+
+.main-content {
+    background: white;
+    width: 80%;
+    border-radius: 1px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    margin: 2rem auto;
+    min-height: 30vh;
+    transition: all 0.3s;
+}
+
+.content-date {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.main-content:hover {
+    transform: scale(1.03);
+}
+
+.content-img {
+    width: 30%;
+}
+
+.text-box {
+    position: relative;
+    text-align: justify;
+    padding: 0.5rem 1rem ;
+}
+
+.content-url {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    text-decoration: none;
+    color: #d92027;
+}
+
+.main-content:hover .content-url {
+    animation: wiggle 0.4s 2s infinite ease-out;
+    animation-direction: normal;
+}
+
+.content-name {
+    text-transform: uppercase;
+    margin: 1rem 0;
+}
+
+.content-description {
+    text-indent: 5rem;
+    line-height: 2rem;
+}
+
+
+@media (max-width:40rem) {
+
+    .main-content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0;
+    }
+
+    .main-container {
+        padding: 1rem;
+    }
+
+    .main-content:hover {
+        transform: scale(1);
+    }
+
+    .content-img {
+        width: 100%;
+    }
+
+    .go-to-top {
+        transform: scale(0.7);
+        bottom: 1rem;
+        right: 1rem;
+    }
+}
+
+
+@media (min-width:40rem) and (max-width:72rem) {
+    .main-content {
+        width: 100%;
+    }
+    .main-container {
+        padding: 2rem;
+    }
+}
+
+
+@keyframes wiggle {
+    0% {
+        right: 0;
+    }
+
+    50% {
+        right: 1rem;
+    }
+    100% {
+        right: 0;
+    }
+}
