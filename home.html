@@ -1,47 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
-      rel="stylesheet"/>
-    <link rel="shortcut icon" href="/img/coffee-cup.svg">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Coffee Time | News Engine</title>
-    <link rel="stylesheet" href="/css/main.css" />
-  </head>
-  <body>
-    <header class="header">
-      <center>
-        <h1 class="heading">
-          <img src="/img/coffee-cup.svg" alt="logo icon" />
-          <span>Coffee Time</span>
-        </h1>
-      </center>
-    </header>
-    <p id="top" style="visibility: hidden;">krishna</p>
 
-    <div class="search-bar">
-      <form class="news-form">
-        <input
-          type="text"
-          class="query"
-          required
-          placeholder="Type the news topic..."
-        />
-        <button class="btn">Search</button>
-      </form>
-    </div>
+<head>
+  <meta charset="UTF-8" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="shortcut icon" href="/img/coffee-cup.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coffee Time | News Engine</title>
+  <link rel="stylesheet" href="/css/main.css" />
+</head>
 
-    <main class="main-container">
-    </main>
+<body>
+  <header class="header">
+    <center>
+      <h1 class="heading">
+        <img src="/img/coffee-cup.svg" alt="logo icon" class="logo" />
+        <span>Coffee Time</span>
+      </h1>
+    </center>
+  </header>
+  <p id="top" style="visibility: hidden;">krishna</p>
 
-    <button class="go-to-top">
-      <p>
-        <a href="#top"><img src="/img/top.svg" /></a>
-      </p>
-    </button>
+  <button class="night">
+    <img src="/img/moon.png">
+  </button>
 
-    <script src="/js/main.js" async defer></script>
-  </body>
+  <div class="search-bar">
+    <form class="news-form">
+      <input type="text" class="query" required placeholder="Type the news topic..." />
+      <button class="btn">Search</button>
+    </form>
+  </div>
+
+  <main class="main-container">
+    <!-- <article class="main-content">
+      <img src="./img/coffee-cup.jpg" class="content-img" />
+      <div class="text-box">
+        <span class="content-date">12-2002-12</span>
+        <h1 class="content-name">Krishna</h1>
+        <p class="content-description">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
+          minima adipisci esse eligendi maxime, voluptates nostrum cum
+          accusantium iusto sit quas, ullam pariatur nam exercitationem soluta
+          obcaecati harum. Ad, neque!
+        </p>
+        <a class="content-url">read more</a>
+      </div>
+    </article> -->
+  </main>
+
+  <button class="go-to-top">
+    <p>
+      <a href="#top"><img src="/img/top.svg" /></a>
+    </p>
+  </button>
+
+  <script src="/js/main.js" async defer></script>
+</body>
+
 </html>
