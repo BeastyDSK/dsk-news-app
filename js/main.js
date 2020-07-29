@@ -74,6 +74,11 @@ function jahkuwbhw_wjsksa(url)
                 textBox.appendChild(contentUrl);
 
                 mainContent.appendChild(textBox);
+                
+                if(nightmode==false) {
+                    mainContent.style.backgroundColor = 'black';
+                    mainContent.style.color = 'white';
+                }
                 mainContainer.appendChild(mainContent);
             }
 
@@ -100,4 +105,47 @@ newsForm.addEventListener('submit',(e)=>{
     jahkuwbhw_wjsksa(`https://bing-news-search1.p.rapidapi.com/news/search?count=10&originalImg=true&freshness=Day&textFormat=Html&safeSearch=Off&q=${query.value}`);
 })
 
+
+
+// The dark mode
+var night = document.querySelector('.night');
+var nightmode=true;
+
+night.addEventListener('click',(e)=>{
+    e.preventDefault();
+    var icon = document.querySelector('.logo');
+    var header = document.querySelector('.header');
+    var input = document.querySelector('.query');
+    var button = document.querySelector('.btn');
+    var content = document.querySelectorAll('.main-content');
+    
+
+    if(nightmode){
+        icon.src = '/img/coffee-cup-white.svg';
+        header.style.backgroundColor = 'black';
+        input.style.backgroundColor = 'black';
+        input.style.color = 'white';
+        button.style.backgroundColor = 'black';
+        button.style.color = 'white';
+        content.forEach(e=>{
+            e.style.backgroundColor = 'black';
+            e.style.color = 'white';
+            
+        })
+        
+    }
+    else {
+        icon.src = '/img/coffee-cup.svg';
+        header.style.backgroundColor = 'white';
+        input.style.backgroundColor = 'white';
+        input.style.color = 'black';
+        button.style.backgroundColor = 'white';
+        button.style.color = 'black';
+        content.forEach(e=>{
+            e.style.backgroundColor = 'white';
+            e.style.color = 'black';    
+        })
+    }
+    nightmode = !nightmode;
+})
 
