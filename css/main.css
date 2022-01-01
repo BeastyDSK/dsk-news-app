@@ -64,6 +64,7 @@ body {
   height: 3rem;
   border: none;
   border-radius: 5rem;
+  padding:0 !important;
   background: #4ea0ae;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
   z-index: 1000;
