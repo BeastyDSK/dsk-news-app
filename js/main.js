@@ -55,24 +55,23 @@ function jahkuwbhw_wjsksa(url)
                     contentDate.setAttribute('class','content-date');
 
                     var date = new Date(e.datePublished);
-                    contentDate.innerHTML = date.toString().slice(0,15);
+                    contentDate.textContent = date.toString().slice(0,15);
                     textBox.appendChild(contentDate);
             
                     contentName = document.createElement('h1');
                     contentName.setAttribute('class','content-name');
                     contentName.innerHTML = e.name;
                     textBox.appendChild(contentName);
-
                     contentDescription = document.createElement('p');
                     contentDescription.setAttribute('class','content-description');
-                    contentDescription.innerHTML = e.description;
+                    contentDescription.innerHTML = e.description+"...";
                     textBox.appendChild(contentDescription);
 
                     contentUrl = document.createElement('a');
                     contentUrl.setAttribute('class','content-url');
                     contentUrl.href = e.url;
-                    contentUrl.target = 'blank';
-                    contentUrl.innerHTML = 'Read More';
+                    contentUrl.target = '_blank';
+                    contentUrl.textContent = 'Read More';
                     textBox.appendChild(contentUrl);
 
                     mainContent.appendChild(textBox);
@@ -87,7 +86,7 @@ function jahkuwbhw_wjsksa(url)
         }
         else {
             var a =prompt("The search Term is not available Please provide any other");
-            if (a=='KrishnaPrasanth Dsk')
+            if (a=='Krishnaprasanth DSK')
             {
                 alert('Thank You 🥰🥰🥰🥰🥰🥰🥰');
                 jahkuwbhw_wjsksa("https://bing-news-search1.p.rapidapi.com/news?count=10&originalImg=true&safeSearch=Off&textFormat=Html");
@@ -102,7 +101,7 @@ function jahkuwbhw_wjsksa(url)
 
 
 (function(){
-    jahkuwbhw_wjsksa("https://bing-news-search1.p.rapidapi.com/news?count=10&originalImg=true&safeSearch=Off&textFormat=Html");
+    jahkuwbhw_wjsksa("https://bing-news-search1.p.rapidapi.com/news?count=10&originalImg=true&safeSearch=Off&textFormat=Raw");
 })();
 
 var newsForm = document.querySelector('.news-form');
@@ -114,9 +113,8 @@ newsForm.addEventListener('submit',(e)=>{
     if(main!=undefined)
         document.querySelector('body').removeChild(main);
     var query = document.querySelector('.query');
-    jahkuwbhw_wjsksa(`https://bing-news-search1.p.rapidapi.com/news/search?count=10&originalImg=true&freshness=Day&textFormat=Html&safeSearch=Off&q=${query.value}`);
+    jahkuwbhw_wjsksa(`https://bing-news-search1.p.rapidapi.com/news/search?count=10&originalImg=true&freshness=Day&textFormat=Raw&safeSearch=Off&q=${query.value}`);
 })
-
 
 
 // The dark mode
@@ -133,7 +131,7 @@ night.addEventListener('click',(e)=>{
     
 
     if(nightmode){
-        icon.src = '/img/coffee-cup-white.svg';
+        icon.src = './img/coffee-cup-white.svg';
         header.style.backgroundColor = 'black';
         input.style.backgroundColor = 'black';
         input.style.color = 'white';
@@ -146,7 +144,7 @@ night.addEventListener('click',(e)=>{
         }) 
     }
     else {
-        icon.src = '/img/coffee-cup.svg';
+        icon.src = './img/coffee-cup.svg';
         header.style.backgroundColor = 'white';
         input.style.backgroundColor = 'white';
         input.style.color = 'black';
