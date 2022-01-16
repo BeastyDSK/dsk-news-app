@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  letter-spacing: 0.05rem;
   font-family: Montserrat, sans-serif;
 }
 
@@ -51,23 +50,23 @@ body {
       rgba(57, 62, 70, 0.918),
       rgb(34, 40, 49, 0.7)
     ),
-    url("/img/coffee-cup.jpg");
+    url("../img/coffee-cup.jpg");
   background-size: cover;
   background-attachment: fixed;
 }
 
 .go-to-top {
   position: fixed;
-  bottom: 3rem;
-  right: 3rem;
+  bottom: 1rem;
+  right: 1rem;
   width: 3rem;
   height: 3rem;
   border: none;
-  border-radius: 5rem;
   padding:0 !important;
+  border-radius: 5rem;
   background: #4ea0ae;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
-  z-index: 1000;
+  z-index: 10;
 }
 
 .go-to-top p {
@@ -104,7 +103,7 @@ body {
   height: 3rem;
   position: fixed;
   top: 6rem;
-  right: 3rem;
+  right: 1rem;
   border-radius: 100%;
   overflow: hidden;
   padding: 0;
@@ -113,8 +112,8 @@ body {
 }
 
 .night img {
-  width: 3.1rem;
-  height: 3.1rem;
+  width: 3rem;
+  height: 3rem;
 }
 
 .heading img {
@@ -193,7 +192,6 @@ form .btn {
 
 .text-box {
   position: relative;
-  text-align: justify;
   padding: 0.5rem 1rem;
 }
 
@@ -211,7 +209,7 @@ form .btn {
 }
 
 .content-name {
-  text-transform: uppercase;
+  text-transform:;
   margin: 1rem 0;
 }
 
