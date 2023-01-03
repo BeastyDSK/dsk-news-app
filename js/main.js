@@ -4,7 +4,7 @@ function jahkuwbhw_wjsksa(url)
         "method": "GET",
         "headers": {
             "x-rapidapi-host": "bing-news-search1.p.rapidapi.com",
-            "x-rapidapi-key": "22a3dd1098mshe1b28ecce445731p1f61c1jsn964bfdf276f8",
+            "x-rapidapi-key": "BLAB BLAB",
             "x-bingapis-sdk": "true"
         }
     })
